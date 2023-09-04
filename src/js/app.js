@@ -73,14 +73,14 @@ const catalog = [
   },
 ];
 
-for (let i = 0; i <= catalog.length; i++) {
+for (const catalogProduct of catalog) {
   const productContainer = document.getElementById("product__container");
   productContainer.innerHTML += `
-  <div class="product__card" id="product__card--${catalog[i].id}">
-    <img class="product__image" src="src/img/${catalog[i].image}.jpg" alt="${catalog[i].imageText}" />
-    <p class="product__brand">${catalog[i].brand}</p>
-    <p class="product__name">${catalog[i].name}</p>
-    <p class="product__price">R$ ${catalog[i].price},00</p>
+  <div class="product__card" id="product__card--${catalogProduct.id}">
+    <img class="product__image" src="src/img/${catalogProduct.image}.jpg" alt="${catalogProduct.imageText}" />
+    <p class="product__brand">${catalogProduct.brand}</p>
+    <p class="product__name">${catalogProduct.name}</p>
+    <p class="product__price">R$ ${catalogProduct.price},00</p>
     <button class="product__buy">Comprar</button>
   </div>
 `;
