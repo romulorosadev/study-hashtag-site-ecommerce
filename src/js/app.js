@@ -15,3 +15,7 @@ const productCard = `
     <button class="product__buy">Comprar</button>
   </div>
 `;
+
+const productContainer = document.getElementById("product__container");
+
+productContainer.innerHTML = productCard;
